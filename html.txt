@@ -1,0 +1,31 @@
+//write a class to calculate the uber price.
+class UberPrice{
+    constructor(name,distance,typeOfLuxary,passengerType,rate,speed)
+{
+    this.name = name;
+    this.distance = distance;
+    this.typeOfLuxary = typeOfLuxary;
+    this.passengerType = passengerType;
+    this.rate=rate;
+    this.speed=speed;
+    
+}
+getPrice(){
+   
+    let ridePrice=this.distance*this.rate;
+    let timeTaken=this.distance*this.speed;//value of distance and speed to be entered in Km nad Km/hr
+    let data=`
+    Name=${this.name}
+    Distance=${this.distance}
+    TypeOfLuxary=${this.typeOfLuxary}
+    passengerType=${this.passengerType}
+    Totalprice=${ridePrice}
+    timeTaken=${timeTaken+"hr"}
+    `
+
+    return data;
+}
+}
+let object= new UberPrice("Tanmay",210,"BMW-AC 2104","Thre Passenger",32,55)
+console.log(object.getPrice());
+// var input=prompt("Please enter name");
